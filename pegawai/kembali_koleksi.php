@@ -1,0 +1,20 @@
+<?php 
+
+    require_once ('../functions/functions.php');
+    
+    $id = $_GET['id'];
+        
+        
+    if (kembaliKoleksiPegawai($id) > 0){
+        echo "<script>
+        alert('Berhasil diajukan untuk dikembalikan');
+        document.location.href='peminjaman_koleksi_pegawai.php';
+        </script>";
+    }else{
+        echo "<script>
+        alert('Gagal diajukan untuk dikembalikan');
+        document.location.href='peminjaman_koleksi_pegawai.php';
+        </script>";
+    }
+
+?>
